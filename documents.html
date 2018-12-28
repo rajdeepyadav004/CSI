@@ -1,42 +1,12 @@
 <!DOCTYPE html>
 <html>
-<style>
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  </head>
 
-body {
-  background-color: black;
-}
-
-input[type=text], select {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-
-input[type=submit] {
-  width: 100%;
-  background-color: #4CAF50;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-input[type=submit]:hover {
-  background-color: #45a049;
-}
-
-div {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
-}
-</style>
 <script type="text/javascript">
 	function myFunction() {
 		var type = document.getElementById("myForm").DocType.value;
@@ -49,27 +19,27 @@ div {
 		return false;
 	}
 </script>
-<body>
+<body class="p-3 mb-2 bg-dark text-white">
 
-<h3 style = "color:white;"">HA HA HA</h3>
+<h3>HA HA HA</h3>
 
-<div>
+<div class="container p-3 mb-2 bg-light text-dark">
   <form id="myForm" onsubmit="myFunction()">
+  	<div class="form-group">
+	    <label for="DocType">Document Type</label>
+	    <select class="form-control" id="DocType" name="DocType">
+	      <option value="PM Report">PM Report</option>
+	      <option value="Toxilogy Report">Toxilogy Report</option>
+	      <option value="Blood Report">Blood Report</option>
+	    </select>
 
-    <label for="DocType">Document Type</label>
-    <select id="DocType" name="DocType">
-      <option value="PM Report">PM Report</option>
-      <option value="Toxilogy Report">Toxilogy Report</option>
-      <option value="Blood Report">Blood Report</option>
-    </select>
-
-    <label for="Name">Name Of Victim</label>
-    <select id="Name" name="Name">
-      <option value="A">A</option>
-      <option value="B">B</option>
-    </select>
-      
-    <input type="submit" value="Submit">
+	    <label for="Name">Name Of Victim</label>
+	    <select class="form-control" id="Name" name="Name">
+	      <option value="A">A</option>
+	      <option value="B">B</option>
+	    </select>
+	</div>
+    <input class="btn btn-primary" type="submit" value="Submit">
   </form>
 </div>
 
